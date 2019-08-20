@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.github.erintl.cache";
+option java_outer_classname = "CacheProto";
+option objc_class_prefix = "CAC";
+
+package cache;
+
+service Cache {
+    rpc setItem(Item) returns (ItemReply) {}
+}
+
+message Item {
+    int32 itemId = 1;
+    string itemName = 2;
+}
+
+message ItemReply {
+    int32 result = 1;
+}
