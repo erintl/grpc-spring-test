@@ -16,3 +16,6 @@ management:
 grpc:
   port: 50051
   enable-reflection: true
+  security:
+    cert-chain: file:ssl/server.crt
+    private-key: file:ssl/server.pem
